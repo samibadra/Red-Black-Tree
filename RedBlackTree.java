@@ -11,7 +11,6 @@
  redistributing any chunk of the source code (or an entire file) will result in
  punishment by law. I, Sami Badra, own all rights to the files and their contents.
  */
- */
 
 public class RedBlackTree<E> {
 	int currentSize;

@@ -51,7 +51,7 @@ public class RedBlackTree<E> {
 	 * @return true if object was added and false if not added
 	 */
 	public boolean add(E obj) {
-		if (root == null) {							//tree is empty
+		if (root == null) {	//tree is empty
 			Node<E> newNode = new Node<E>(obj);
 			root = newNode;
 			currentSize++;
@@ -60,10 +60,10 @@ public class RedBlackTree<E> {
 		}
 		Node<E> tmp = root;
 		while(true) {
-			if  (((Comparable<E>)obj).compareTo((E)tmp.data) >= 0) {	//obj is larger than tmp.data
-				if (tmp.rightChild == null) {						//reached a null subtree
+			if  (((Comparable<E>)obj).compareTo((E)tmp.data) >= 0) {//obj is larger than tmp.data
+				if (tmp.rightChild == null) {			//reached a null subtree
 					Node<E> newNode = new Node<E>(obj);
-					newNode.parent = tmp;							//set parent pointer
+					newNode.parent = tmp;	//set parent pointer
 					tmp.rightChild = newNode;
 					currentSize++;
 					if (newNode.isRed && newNode.parent.isRed) {	//consecutive red node violation
@@ -72,13 +72,13 @@ public class RedBlackTree<E> {
 					return true;
 				}
 				else {
-					tmp = tmp.rightChild;							//traverse down tree
+					tmp = tmp.rightChild;	//traverse down tree
 				}
 			}
-			else {													//obj is smaller than tmp.data
-				if (tmp.leftChild == null) {						//reached a null subtree
+			else {		//obj is smaller than tmp.data
+				if (tmp.leftChild == null) {	//reached a null subtree
 					Node<E> newNode = new Node<E>(obj);
-					newNode.parent = tmp;							//set parent pointer
+					newNode.parent = tmp;	//set parent pointer
 					tmp.leftChild = newNode;
 					currentSize++;
 					if (newNode.isRed && newNode.parent.isRed) {	//consecutive red node violation
@@ -87,7 +87,7 @@ public class RedBlackTree<E> {
 					return true;
 				}
 				else {
-					tmp = tmp.leftChild;						//traverse down tree
+					tmp = tmp.leftChild;	//traverse down tree
 				}
 			}
 		}
@@ -135,7 +135,7 @@ public class RedBlackTree<E> {
 		Node<E> aunt = auntOf(node);
 		if (aunt == null || !aunt.isRed) {	//aunt node is black or null... rotate
 			if (node == parent.rightChild) {
-				if (parent == grandpa.rightChild) {	//error is in the (grandfathers) right child's right child
+				if (parent == grandpa.rightChild) {	//error is in the grandfathers right child's right child
 					newTop = leftRotation(grandpa);
 					if (grandpa != root) {
 						newTop.parent = grandpa.parent;		//sets the new parent pointer
@@ -156,7 +156,7 @@ public class RedBlackTree<E> {
 					newTop.rightChild.isRed = true;
 					root.isRed = false;
 				}
-				else if (parent == grandpa.leftChild) {	//error is in the (grandfathers) left child's right child
+				else if (parent == grandpa.leftChild) {	//error is in the grandfathers left child's right child
 					leftRotation(parent);
 					grandpa.leftChild = node;
 					newTop = rightRotation(grandpa);
@@ -182,7 +182,7 @@ public class RedBlackTree<E> {
 				}
 			}
 			else if (node == parent.leftChild) {
-				if (parent == parent.parent.rightChild) {	//error is in the (grandfathers) right child's left child
+				if (parent == parent.parent.rightChild) {//error is in the grandfathers right child's left child
 					rightRotation(parent);
 					grandpa.rightChild = node;
 					newTop = leftRotation(grandpa);

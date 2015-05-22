@@ -100,7 +100,7 @@ public class RedBlackTree<E> {
 	 * @return true if the data was found and false if the data was not found
 	 */
 	public boolean find(E obj) {
-		return find(root,obj);								//starts at the root node
+		return find(root,obj);		//starts at the root node
 	}
 	
 	/**

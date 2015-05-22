@@ -1,7 +1,13 @@
-/**
- * @author samib
- *
+/*
+ Sami Badra
+ 
+ CS 310, Spring 2014
+ Assignment #3, red-black BST
+ FILE: Word.java
+ 
+ Copyright (c) 2015 Sami Badra. All rights reserved.
  */
+
 public class Word implements Comparable<Word> {
 	private String s;
 	
@@ -30,7 +36,7 @@ public class Word implements Comparable<Word> {
 	}
 	
 	/**
-	 * compareTo method compares two strings to each other
+	 * compareTo method compares two words to each other
 	 */
 	@Override
 	public int compareTo(Word w) {
@@ -46,5 +52,4 @@ public class Word implements Comparable<Word> {
 	public String toString() {
 		return s;
 	}
-	
 }

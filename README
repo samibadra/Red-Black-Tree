@@ -1,2 +1,16 @@
-# Red-Black-Tree
-An implementation of a Red-Black (balanced) binary search tree for GENERIC data types
+Copyright 2015 Sami Badra
+
+DISCLAIMER: Any unauthorized use, including but not limited to, copying or
+redistributing any chunk of the source code (or an entire file) will result in
+punishment by law. I, Sami Badra, own all rights to the files and their contents.
+
+Description:
+This assignment required me to implement my own Red-Black (balanced) binary search tree to store GENERIC data types. I then created a "Word" class which is the datatype to be stored in the tree.
+The TimingTests class shall read from a text file, and store all of the words within the file, into the binary search tree, while stil maintaining a complexity of O(1) for adding/searching. It will print the total time elapsed (millisec) to add all the words from the file to the tree. It will also print the average time (nanosec) to search for a word in the tree.
+
+NOTE BEFORE RUNNING: In 'TimingTests.java', replace the strings being used to construct Words a-j. Change these to strings that are actually in the text file that it is reading the words from, so that it searches for words that are actually in the tree.
+
+Lessons Learned:
+- After completing this project, I am much more experienced in the concepts of data structures - especially (of course) with Binary Search Trees.
+- I became MUCH more efficient with my debugging skills, as I was tasked with solving numerous bugs in the code since I started it.
+- I also learned a lot about how to work with Generic data types, and how to use the compareTo() method to implement generics.

@@ -1,13 +1,9 @@
-Copyright 2015 Sami Badra. All Rights Reserved
-
-Sami Badra
-
-CS 310, Spring 2014
-
-Assignment #3
-
+Sami Badra  
+CS 310, Spring 2014  
+Assignment #3  
 FILE: README
 
+Copyright 2015 Sami Badra. All Rights Reserved
 
 ##Description
 This assignment required an implemention of my own Red-Black (balanced) binary search tree to store GENERIC data types. Furthermore, the "Word" class is the datatype to be stored/searched for in the tree.
